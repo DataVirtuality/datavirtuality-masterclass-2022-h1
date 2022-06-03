@@ -1,6 +1,6 @@
 # datavirtuality-masterclass-2022
 
-This repository contains the recordings from the Data Virtuality Masterclass 2022.
+This repository contains the recordings and slides from the Data Virtuality Masterclass 2022.
 
 ## Please find the links to the recorded masterclass sessions here for 2022
 
