@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<title>
+    Test Report
+</title>
+<style type="text/css">
+    body {
+        background: #FFFFFF;
+        color: #000;
+    }
+
+    .elementor-widget-container {
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    table {
+        border: 3px solid #FF7B22;
+        border-spacing: 0px;
+        border-collapse: separate;
+        padding: 0px;
+    }
+
+    th,
+    td {
+        border: 1px solid #ff7a2283;
+        border-spacing: 0px;
+        border-collapse: separate;
+        padding: 3px;
+    }
+
+    th {
+        color: #FFFFFF;
+        background: #FF7B22;
+    }
+</style>
+
+<body>
+    <div class="elementor-widget-container">
+        <a href="https://datavirtuality.com/en/">
+            <img width="526" height="163" src="{{ logo_link }}" class="attachment-full size-full" alt="" loading="lazy">
+        </a>
+    </div>
+
+    <h1>Report Title</h1>
+
+    <table>
+        <thead>
+            <tr>
+                {% for col_name in col_names %}
+                <th>{{ col_name }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data.itertuples(index=False) %}
+            <tr>
+                {% for col in row %}
+                <td>{{ col }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+
+</html>
